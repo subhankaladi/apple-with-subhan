@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const phones = [
@@ -29,7 +30,7 @@ const PhoneGrid = () => {
             className="border rounded-lg shadow hover:shadow-lg p-4 bg-slate-100"
           >
             <div className="w-full h-48 flex items-center justify-center">
-              <img
+              <Image width={1000} height={1000}
                 src={phone.image}
                 alt={phone.title}
                 className="object-contain w-full h-full"

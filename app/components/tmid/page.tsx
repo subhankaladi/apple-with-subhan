@@ -28,6 +28,7 @@ const Tmid = () => {
   const smidRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentRef = smidRef.current; // Copy the ref value to a local variable
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -37,13 +38,13 @@ const Tmid = () => {
       { threshold: 0.7 }
     );
 
-    if (smidRef.current) {
-      observer.observe(smidRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (smidRef.current) {
-        observer.unobserve(smidRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -55,11 +56,11 @@ const Tmid = () => {
       } flex flex-col items-center justify-center `}
       ref={smidRef}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl p-4">
         {iphones.map((iphone) => (
           <div
             key={iphone.id}
-            className="iphone-card flex flex-col items-center rounded-lg shadow-lg p-4  "
+            className="iphone-card flex flex-col items-center rounded-lg shadow-lg p-4"
           >
             <Image
               width={200}

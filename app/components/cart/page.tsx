@@ -2,6 +2,19 @@ import React from 'react';
 import './cart.css';
 import Image from 'next/image';
 
+type CartItemType = {
+  id?: number;
+  image: string;
+  title?: string;
+  name?: string;
+  description?: string;
+  rating?: string;
+  price?: string;
+  link?: string; // `link` is optional
+
+};
+
+
 const CartItem = [
   {
     image: '/it.png',
@@ -118,11 +131,11 @@ const items = [
 ];
 
 const Cart = () => {
-  const renderRow = (data:any, isDetailed = false) => (
+  const renderRow = (data: CartItemType[], isDetailed = false) => (
     <div className="cart-row">
-      {data.map((item:any, index:any) => (
+      {data.map((item: CartItemType, index: number) => (
         <div key={index} className="cart-item">
-          <Image width={200} height={200} src={item.image} alt={item.title || item.name} />
+          <Image width={200} height={200} src={item.image} alt={item.title || item.name || 'Item'} />
           <div className="item-details">
             <h3>{item.title || item.name}</h3>
             {isDetailed && <p>{item.description || item.rating}</p>}
@@ -133,6 +146,7 @@ const Cart = () => {
       ))}
     </div>
   );
+  
 
   return (
     <div>

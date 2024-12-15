@@ -1,5 +1,6 @@
 import React from 'react';
 import './Pods.css';
+import Image from 'next/image';
 
 const pods = [
   { name: 'Apple AirPods (2nd Gen)', price: '$129.99', image: '/ap1.jpg' },
@@ -19,7 +20,7 @@ const Pods = () => {
     <div className="pods-container">
       {pods.map((pod, index) => (
         <div className="pod-item" key={index}>
-          <img src={pod.image} alt={pod.name} />
+          <Image width={1000} height={1000} src={pod.image} alt={pod.name} />
           <h3>{pod.name}</h3>
           <p>{pod.price}</p>
         </div>

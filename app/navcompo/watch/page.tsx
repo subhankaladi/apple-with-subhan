@@ -1,5 +1,6 @@
 import React from 'react';
 import './Watch.css';
+import Image from 'next/image';
 
 const watches = [
   { name: 'Apple Watch SE (2nd Gen) 41mm', price: '$249.99', image: '/w1.jpg' },
@@ -27,7 +28,7 @@ const Watch = () => {
     <div className="watch-container">
       {watches.map((watch, index) => (
         <div className="watch-item" key={index}>
-          <img src={watch.image} alt={watch.name} />
+          <Image width={1000} height={1000} src={watch.image} alt={watch.name} />
           <h3>{watch.name}</h3>
           <p>{watch.price}</p>
         </div>

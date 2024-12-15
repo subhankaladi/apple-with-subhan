@@ -1,5 +1,6 @@
 import React from 'react';
 import './iPad.css';
+import Image from 'next/image';
 const products = [
     {
       title: "iPad (10th Generation)",
@@ -81,7 +82,7 @@ const iPad = () => {
     <div className="ipad-container">
       {products.map((product, index) => (
         <div className="card" key={index}>
-          <img src={product.image} alt={product.title} className="card-image" />
+          <Image width={1000} height={1000} src={product.image} alt={product.title} className="card-image" />
           <h3 className="card-title">{product.title}</h3>
           <p className="card-description">{product.description}</p>
           <p className="card-price">{product.price}</p>
