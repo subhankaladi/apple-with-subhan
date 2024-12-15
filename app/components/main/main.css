@@ -1,0 +1,84 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 20px;
+    animation: fade-in 2s ease forwards ;
+  
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%;
+    }
+    .main-content{
+        height: 50vh;
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+    .main-content{
+        height: 50vh;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+   
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+}

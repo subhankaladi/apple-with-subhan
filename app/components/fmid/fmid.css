@@ -1,0 +1,52 @@
+.fmid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    
+}
+.fmid-item h1{
+    font-size: 40px;
+}
+.fmid-item p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.main-fmid{
+    
+    height: auto;
+    max-width: auto;
+   
+    height: 60vh;
+    margin-top: 150px;
+
+}
+
+.fmid-item button{
+    padding: 8px 15px;
+    background-color: #0016e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid #0016e0;
+}
+
+.fmid-item button:hover{
+    background-color: #000;
+}
+@media (max-width: 1050px){
+
+    .main-fmid{
+        height: 40vh;
+    }
+    
+}
+@media (max-width: 650px){
+    .main-fmid{
+        height: 55vh;
+    }
+
+}

@@ -1,0 +1,140 @@
+.cart-main .h1 {
+    background-image: linear-gradient(rgb(255, 67, 67), rgb(62, 62, 255));
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 900;
+  }
+  
+  .cart-main .gift {
+    font-size: 34px;
+    color: rgb(130, 130, 130);
+    text-align: center;
+  }
+  
+  .cart-main {
+    padding: 30px;
+  }
+  
+  .main-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .cart-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: rgb(47, 47, 47);
+    max-width: 200px;
+    animation: fade-in 2s ease forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .cart-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  
+  .cart-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-button:hover {
+    background-color: #005bb5;
+  }
+  
+  .item-details {
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-main .h1 {
+      font-size: 36px;
+    }
+  
+    .cart-main .gift {
+      font-size: 28px;
+    }
+  
+    .cart-row {
+      gap: 15px;
+    }
+  
+    .cart-item {
+      max-width: 180px;
+    }
+  
+    .cart-item img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-main .h1 {
+      font-size: 28px;
+    }
+  
+    .cart-main .gift {
+      font-size: 20px;
+    }
+  
+    .cart-row {
+      justify-content: space-between;
+      gap: 10px;
+    }
+  
+    .cart-item {
+      max-width: 150px;
+      padding: 8px;
+    }
+  
+    .cart-item img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .cart-button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  

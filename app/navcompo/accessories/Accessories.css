@@ -1,0 +1,13 @@
+.main-accessories{
+    animation: fade-in 2s ease forwards;
+
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  
+}

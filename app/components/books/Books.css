@@ -1,0 +1,65 @@
+.books-carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: auto;
+    height: 50vh;
+    margin-top: 69px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 10px; /* Reduced the gap further */
+    animation: scroll 15s linear infinite;
+    width: calc(7 * 220px); /* Reduced the total width for all cards */
+  }
+  
+  .book-item {
+    min-width: 220px; /* Further reduced card size */
+    flex-shrink: 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-item img {
+    width: 100%; /* Ensures image occupies full card width */
+    height: 290px; /* Set the height for all images to be consistent */
+    object-fit: cover; /* Ensures images do not stretch and maintain aspect ratio */
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .book-item h1 { /* Reduced font size for title */
+    font-size: 0.9rem; /* Smaller title font size */
+    margin: 6px 0 4px;
+  }
+  
+  .book-item p { /* Reduced font size for author */
+    font-size: 0.75rem; /* Smaller font size for author */
+    color: #666;
+    margin: 0 0 6px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .book-item {
+      min-width: 120px; /* Further reduced size for mobile view */
+    }
+  
+    .carousel-track {
+      gap: 8px;
+      width: calc(7 * 120px);
+    }
+  }
+  
+  /* Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
